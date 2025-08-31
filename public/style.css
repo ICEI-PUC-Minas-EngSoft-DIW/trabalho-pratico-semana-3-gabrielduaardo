@@ -1,4 +1,4 @@
-/* Reset básico */
+/* Reset Básico */
 * {
     margin: 0;
     padding: 0;
@@ -6,22 +6,30 @@
 }
 
 body {
-    background-color: #F4F6F8;
+    background-color: #F0EAD6;
+    font-family: Arial, sans-serif;
+    color: #5C3A21;
 }
 
-/* Barra de navegação */
+.logo img {
+    max-width: 100px;
+    width: auto;
+    display: block;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navegação */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 40px;
     background-color: #6A7F93;
-}
-
-.logo img {
-    max-height: 60px;
-    width: auto;
-    display: block;
 }
 
 .nav-links {
@@ -38,11 +46,11 @@ body {
 }
 
 .nav-links a:hover {
-    color: #f1c40f;
+    color: #F0EAD6;
 }
 
 .btn-registrar {
-    background-color: #F0EAD6;
+    background-color: #C3B37D;
     color: #A54B3B !important;
     padding: 8px 14px;
     border-radius: 4px;
@@ -57,7 +65,9 @@ body {
     justify-content: center;
     text-align: center;
     color: #fff;
-    color: #000;
+    background-image: url('https://picsum.photos/id/1083/1600/600');
+    background-size: cover;
+    background-position: center;
     position: relative;
 }
 
@@ -66,7 +76,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #FFFFFF;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .banner-content {
@@ -81,14 +91,33 @@ body {
     margin-bottom: 10px;
 }
 
-.cidades-destaque {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.proximos-eventos {
+    background-color: #F0EAD6;
+    /* Cor de fundo (Queijo Minas) */
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 40px;
+    /* Espaço na parte de baixo */
 }
 
-/* Container que vai organizar os cards lado a lado */
-.card-container {
+.aviso-evento {
+    font-style: italic;
+    color: #5C3A21;
+}
+
+/* Títulos das Seções */
+.titulo-secao {
+    color: #C3B37D;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Contêiner de Cards */
+.card-container,
+.card-container-pequeno {
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -96,61 +125,62 @@ body {
     margin-bottom: 20px;
 }
 
-/* Estilo do texto Destaque */
-.destaque {
-    color: #C3B37D;
-    font-size: 2rem;
-    margin: 20px 0;
-    text-align: center;
-    font-size: 2.5rem;
-}
-
-/* Estilo de cada card individual */
+/* Estilo de cada Card */
 .card {
-    background-color: #F0EAD6;
+    background-color: #fff;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    max-width: 350px;
-    display: flex;
-    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 1 300px;
 }
 
-/* Ao passar o mouse, o card vai dar um zoom */
+.card-pequeno {
+    flex: 1 1 200px;
+}
+
 .card:hover {
-    transform: scale(1.07);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Imagem ocupar o tamanho todo do card */
 .card img {
     width: 100%;
     height: auto;
+    display: block;
 }
 
-/* Estilo do conteúdo do card */
 .card-content {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    height: 100%;
 }
 
-/* Estilo do título do card */
 .card-content h3 {
     color: #A54B3B;
     margin-bottom: 10px;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
-/* Estilo do Botão de ver mais */
+.card-content p {
+    color: #5C3A21;
+}
+
+/* Botão "Ver Mais" */
 .btn-vermais {
-    display: inline-block;
-    margin-top: 10px;
+    display: block;
+    margin: 20px auto 40px;
+    width: 150px;
     text-align: center;
-    background-color: #F0EAD6;
-    color: #A54B3B;
+    background-color: #C3B37D;
+    color: #fff;
     padding: 10px 20px;
-    border-radius: 10px;
+    border-radius: 4px;
     text-decoration: none;
     font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-vermais:hover {
+    background-color: #A54B3B;
 }
