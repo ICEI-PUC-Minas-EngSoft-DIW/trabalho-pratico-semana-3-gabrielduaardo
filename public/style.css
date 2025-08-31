@@ -57,7 +57,7 @@ body {
     font-weight: bold;
 }
 
-/* Banner */
+/* Banner Principal */
 .banner {
     height: 400px;
     display: flex;
@@ -89,22 +89,6 @@ body {
 .banner-content h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
-}
-
-.proximos-eventos {
-    background-color: #F0EAD6;
-    /* Cor de fundo (Queijo Minas) */
-    padding: 40px 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin-bottom: 40px;
-    /* Espaço na parte de baixo */
-}
-
-.aviso-evento {
-    font-style: italic;
-    color: #5C3A21;
 }
 
 /* Títulos das Seções */
@@ -183,4 +167,53 @@ body {
 
 .btn-vermais:hover {
     background-color: #A54B3B;
+}
+
+/* Eventos e Depoimentos (seções de colunas) */
+.eventos-e-depoimentos {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.coluna-eventos,
+.coluna-depoimentos {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.coluna-eventos .titulo-secao,
+.coluna-depoimentos .titulo-secao {
+    text-align: left;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+.conteudo-card-eventos,
+.conteudo-card-depoimentos {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.aviso-evento {
+    font-style: italic;
+    color: #5C3A21;
+}
+
+/* Rodapé */
+.rodape-azul {
+    background-color: #007BA7;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
 }
